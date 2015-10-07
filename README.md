@@ -1,9 +1,9 @@
 # node-api-server
 An example of a simple Node API server with a React front end. And Pokemon.
 
-## Slides from the API presentation
+## Slides from API presentation
 
-[ProvoJS, July 2015: APIs](https://slides.com/andrewjensen/provojs-apis/).
+[Find slides from a presentation given for this at ProvoJS, July 2015: APIs](https://slides.com/andrewjensen/provojs-apis/).
 
 ## Running the server
 

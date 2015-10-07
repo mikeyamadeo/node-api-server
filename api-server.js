@@ -1,27 +1,27 @@
 /**
  * Load dependencies
  */
-var express = require('express');
-var cors = require('cors');
-var db = require('./database.js');
-var app = express();
-app.use(cors()); // This lets us use different ports for React and API.
-var port = 4000;
+var express = require('express')
+var cors = require('cors')
+var db = require('./database.js')
+var app = express()
+app.use(cors()) // This lets us use different ports for React and API.
+var port = 4000
 
 /**
  * Send the HTML for the front end.
  */
 app.get('/', function (request, response) {
-  response.send('Welcome to the API server!');
-});
+  response.send('Welcome to the API server!')
+})
 
 /* ***************************
  * Trainer-related API calls
  ****************************/
 
-app.get('/api/trainers', function(request, response) {
-  response.json(db.getAllTrainers());
-});
+app.get('/api/trainers', function (request, response) {
+  response.json(db.getAllTrainers())
+})
 
 /**
  * TODO: create an endpoint that gets a single trainer by their ID.
@@ -40,16 +40,16 @@ app.get('/api/trainers', function(request, response) {
  ****************************/
 
 app.get('/api/pokemon', function (request, response) {
-  response.json(db.getAllPokemon());
-});
+  response.json(db.getAllPokemon())
+})
 
 app.get('/api/pokemon/:id', function (request, response) {
-  var pokemonId = request.params.id;
-  response.json(db.getPokemonById(pokemonId));
+  var pokemonId = request.params.id
+  response.json(db.getPokemonById(pokemonId))
   /**
    * TODO: finish implementing the `db.getPokemonById` function.
    */
-});
+})
 
 /**
  * TODO: create an endpoint that gets all the pokemon for a trainer.
@@ -67,5 +67,5 @@ app.get('/api/pokemon/:id', function (request, response) {
  * Start the server.
  */
 var server = app.listen(port, function () {
-  console.log('API Server listening on port %s', port);
-});
+  console.log('API Server listening on port %s', port)
+})
