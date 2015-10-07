@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+html {
+    @include font-smoothing();
+    font-family: $base-font-family;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $header-font-weight;
+}
+
+a {
+    text-decoration: none;
+
+    &:link, &:visited {
+        color: $link-color;
+    }
+
+    &:hover, &:active, &:focus {
+        color: $link-hover-color;
+    }
+}
+
+
+.pokemon-table, .trainer-table {
+    margin: 10px 0 30px;
+    border: 1px solid $color-table-border;
+    border-collapse: collapse;
+
+    thead {
+        th, td {
+            background-color: $background-color-table;
+        }
+    }
+
+    th, td {
+        border: 1px solid $color-table-border;
+        text-align: left;
+        padding: 5px 20px;
+    }
+}
